@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Fredoka', sans-serif;
+    --font-handwriting: 'Caveat', cursive;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    background-color: #f5f0eb;
+    color: #000000;
+  }
+}
+
+.font-sans { font-family: var(--font-sans); }
+.font-display { font-family: var(--font-display); }
+.font-handwriting { font-family: var(--font-handwriting); }
+.font-serif { font-family: var(--font-serif); }
+
+/* Parallax Sections */
+.parallax-section {
+  position: relative;
+  will-change: transform;
+}
+
+/* Repeating watermark text */
+.watermark-text {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(0,0,0,0.08);
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 2;
+  overflow: hidden;
+}
+
+.dark .watermark-text {
+  color: rgba(255,255,255,0.05);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* Editorial grid borders */
+.editorial-border {
+  border: 2px solid #000;
+}
+
+.dark .editorial-border {
+  border-color: #333;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5f0eb; }
+.dark ::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #000; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #555; }
+
+/* Selection */
+::selection { background: #000; color: #fff; }
+.dark ::selection { background: #fff; color: #000; }
