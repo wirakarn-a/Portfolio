@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import LandingCover from './components/LandingCover';
 import Hero3D from './components/Hero3D';
 import Experience from './components/Experience';
+import AdditionalExperience from './components/AdditionalExperience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Languages from './components/Languages';
@@ -32,17 +33,20 @@ function App() {
         {/* SECTION 3: Experience */}
         <Experience />
 
-        {/* SECTION 4: Education */}
+        {/* SECTION 3.5: Additional Experience — Photo Gallery */}
+        <AdditionalExperience />
+
+        {/* SECTION 4: Projects */}
+        <Projects />
+
+        {/* SECTION 5: Education */}
         <Education />
 
-        {/* SECTION 5: Skills / Services */}
+        {/* SECTION 6: Skills / Services */}
         <Skills />
 
-        {/* SECTION 6: Languages */}
+        {/* SECTION 7: Languages */}
         <Languages />
-
-        {/* SECTION 7: Projects */}
-        <Projects />
 
         {/* SECTION 7: Contact */}
         <Contact />
