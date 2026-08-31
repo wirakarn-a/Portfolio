@@ -6,10 +6,10 @@ import { personalInfo } from '../data/portfolioData';
 const navItems = [
   { id: 'hero', name: 'ABOUT ME' },
   { id: 'experience', name: 'EXPERIENCE' },
+  { id: 'projects', name: 'PROJECTS' },
   { id: 'education', name: 'EDUCATION' },
   { id: 'skills', name: 'SKILLS' },
   { id: 'languages', name: 'LANGUAGES' },
-  { id: 'projects', name: 'PROJECTS' },
   { id: 'contact', name: 'CONTACT' },
 ];
 
