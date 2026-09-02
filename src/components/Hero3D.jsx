@@ -113,9 +113,6 @@ const Hero3D = () => {
                     HERE'S WHY YOU NEED ME
                   </div>
                 </div>
-                <span className="font-mono text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">
-                  PORTFOLIO 2025
-                </span>
               </div>
 
               {/* Main Headline */}
@@ -201,15 +198,6 @@ const Hero3D = () => {
                   className="w-10 h-10 rounded-full border border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-110 transition-all"
                 >
                   <LinkedinIcon className="w-4 h-4" />
-                </a>
-                <a 
-                  href={personalInfo.socials.twitter} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  aria-label="Twitter"
-                  className="w-10 h-10 rounded-full border border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-110 transition-all"
-                >
-                  <TwitterIcon className="w-4 h-4" />
                 </a>
                 <a 
                   href={personalInfo.socials.instagram} 

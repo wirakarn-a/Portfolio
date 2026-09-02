@@ -1,16 +1,14 @@
 export const personalInfo = {
   name: "Wirakarn Angumnuaychock",
   title: "CREATIVE DEVELOPER",
-  tagline: "EDITORIAL DESIGN & FULL-STACK SOFTWARE ENGINEERING",
   bio: "Business operations background — purchasing, executive support, cross-functional coordination — now channeled into Product Management, with a growing interest in Software Development and UX/UI Design.",
   location: "Bangkok, Thailand",
   status: "🟢 AVAILABLE FOR FREELANCE & FULL-TIME",
   email: "wirakarn.ang@gmail.com",
   phone: "+66 96 130 6258",
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/wirakarn-a",
     linkedin: "https://www.linkedin.com/in/wirakarn-angumnuaychock-576363242/",
-    twitter: "https://twitter.com",
     instagram: "https://instagram.com",
     line: "https://line.me"
   }
@@ -19,9 +17,9 @@ export const personalInfo = {
 export const experiences = [
   {
     id: 1,
-    role: "Senior Software Engineer & Frontend Developer",
-    company: "Tech Interactive Studio",
-    period: "2024 - PRESENT",
+    role: "Junior Software Developer Bootcamp",
+    company: "Generation Thailand",
+    period: "Jul 2026 - PRESENT",
     type: "FULL-TIME",
     location: "BANGKOK",
     badgeColor: "bg-black text-white border-pink-400",
@@ -31,17 +29,17 @@ export const experiences = [
       "ลดเวลาโหลดหน้าเว็บลง 45% ด้วยเทคนิค Lazy Loading & Asset Compression",
       "นำกระบวนการพัฒนา Component Library มาใช้งานร่วมกับทีมอย่างมีประสิทธิภาพ"
     ],
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Node.js", "GSAP"]
+    techStack: ["React", "NoSQL", "Tailwind CSS", "Node.js", "HTML", "Figma"]
   },
   {
     id: 2,
-    role: "Full-Stack Web Developer",
-    company: "Pixel Craft Tech",
-    period: "2022 - 2024",
+    role: "Purchasing Officer",
+    company: "Hi-Tech Apparel Co., Ltd",
+    period: "Sep 2025 - Jun 2026",
     type: "FULL-TIME",
     location: "BANGKOK",
     badgeColor: "bg-pink-400 text-white border-black",
-    description: "รับผิดชอบพัฒนา Web Application และ RESTful API ให้ลูกค้าภาคธุรกิจ รวมถึงระบบ E-commerce ที่มีความปลอดภัยสูงและรองรับผู้ใช้พร้อมกันจำนวนมาก",
+    description: "Coordinated with many international suppliers across Vietnam, Hong Kong, Taiwan, and China",
     achievements: [
       "ออกแบบและพัฒนา Dashboard แบบ Real-time ที่มี WebSockets ภายใน 2 เดือน",
       "บูรณาการ Payment Gateway ประมวลผลธุรกรรมสำเร็จ 99.9%"
@@ -50,13 +48,13 @@ export const experiences = [
   },
   {
     id: 3,
-    role: "Software Development Intern",
-    company: "WonderLab Digital",
-    period: "2021 - 2022",
-    type: "INTERNSHIP",
+    role: "Executive Assistant",
+    company: "TRA Development Co., Ltd",
+    period: "Nov 2024 - Apr 2025",
+    type: "FULL-TIME",
     location: "BANGKOK",
     badgeColor: "bg-pink-100 text-black border-black",
-    description: "ออกแบบ UI Wireframe, Interactive Prototype ใน Figma และแปลงแบบดีไซน์ให้เป็น Responsive Application พร้อม Animation ที่ลื่นไหล",
+    description: "Supported planning and logistics for meetings and cross-team initiatives from start to finish",
     achievements: [
       "คว้ารางวัล Best Creative UI Project ในงานประจำปีของบริษัท",
       "สร้าง Micro-interactions และ Custom Animations เพิ่ม Engagement 30%"
@@ -68,22 +66,22 @@ export const experiences = [
 export const education = [
   {
     id: 1,
-    degree: "ปริญญาตรี เทคโนโลยีสารสนเทศ (B.Sc. in Information Technology)",
-    institution: "สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)",
-    period: "2021 - 2025",
+    degree: "Bachelor of Business Administration",
+    institution: "Assumption University (ABAC)",
+    period: "2020 - 2024",
     gpa: "HIGH DISTINCTION",
     details: "เชี่ยวชาญด้าน Software Engineering, Web Application Development, Information Technology และ Computer Science ร่วมทำโครงงานพัฒนาเว็บแอปพลิเคชันระดับมืออาชีพ",
-    badge: "🎓 KMITL Information Technology",
+    badge: " DIGITAL BUSINESS MANAGEMENT",
     badgeColor: "bg-black text-pink-300 border-pink-400"
   },
   {
     id: 2,
-    degree: "มัธยมศึกษาตอนปลาย แผนการเรียน วิทย์-คณิต",
-    institution: "โรงเรียนมัธยมศึกษาชั้นนำ",
-    period: "2018 - 2021",
-    gpa: "3.85 / 4.00",
+    degree: "High School English-Chinese Program",
+    institution: "Wangklaikangwon School",
+    period: "2014 - 2020",
+    gpa: "3.75",
     details: "สำเร็จการศึกษาด้วยผลการเรียนดีเยี่ยม เข้าร่วมกิจกรรมและโครงการแข่งขันด้านเทคโนโลยีและคอมพิวเตอร์อย่างสม่ำเสมอ",
-    badge: "📜 Science-Math Program",
+    badge: "📜 English-Chinese Program",
     badgeColor: "bg-pink-400 text-white border-black"
   }
 ];
