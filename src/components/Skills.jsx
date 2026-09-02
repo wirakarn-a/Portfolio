@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Server, Palette, Wrench } from 'lucide-react';
+import { Code2, Server, Palette, Wrench, HeartHandshake } from 'lucide-react';
 import { skills } from '../data/portfolioData';
 
 const categoryTabs = [
@@ -8,6 +8,7 @@ const categoryTabs = [
   { id: 'backend', label: 'Backend & Data', icon: Server },
   { id: 'creative', label: 'UI/UX & Creative', icon: Palette },
   { id: 'tools', label: 'Tools & DevOps', icon: Wrench },
+  { id: 'soft', label: 'Soft Skills & Leadership', icon: HeartHandshake },
 ];
 
 const Skills = () => {
@@ -41,64 +42,37 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Two-column layout: Left = categories, Right = stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-
-          {/* Left: Category tabs as editorial list */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-3"
-          >
-            {categoryTabs.map((tab) => {
-              const Icon = tab.icon;
-              const isActive = activeCategory === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveCategory(tab.id)}
-                  className={`
-                    w-full text-left flex items-center gap-4 px-6 py-4 rounded-xl border-2 font-sans font-bold text-base transition-all cursor-pointer
-                    ${isActive
-                      ? 'bg-white text-black border-white dark:bg-black dark:text-white dark:border-black shadow-lg scale-[1.02]'
-                      : 'bg-transparent text-zinc-400 dark:text-zinc-500 border-zinc-700 dark:border-zinc-300 hover:border-white dark:hover:border-black hover:text-white dark:hover:text-black'
-                    }
-                  `}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span className="tracking-wider uppercase">{tab.label}</span>
-                  <span className="ml-auto text-xs font-mono opacity-50">{skills[tab.id].length} skills</span>
-                </button>
-              );
-            })}
-          </motion.div>
-
-          {/* Right: Stats / Analytics cards (Image 2 style charts area) */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
-          >
-            <div className="bg-zinc-900 dark:bg-zinc-100 border-2 border-zinc-700 dark:border-zinc-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-              <span className="font-sans font-black text-4xl text-white dark:text-black">75K</span>
-              <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-wider mt-1">Lines of Code</span>
-            </div>
-            <div className="bg-zinc-900 dark:bg-zinc-100 border-2 border-zinc-700 dark:border-zinc-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-              <span className="font-sans font-black text-4xl text-white dark:text-black">25K</span>
-              <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-wider mt-1">Contributions</span>
-            </div>
-            <div className="bg-zinc-900 dark:bg-zinc-100 border-2 border-zinc-700 dark:border-zinc-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-              <span className="font-sans font-black text-4xl text-white dark:text-black">150K</span>
-              <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-wider mt-1">Page Views</span>
-            </div>
-            <div className="bg-zinc-900 dark:bg-zinc-100 border-2 border-zinc-700 dark:border-zinc-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-              <span className="font-sans font-black text-4xl text-white dark:text-black">85%</span>
-              <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-wider mt-1">Client Satisfaction</span>
-            </div>
-          </motion.div>
-        </div>
+        {/* Category Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-10"
+        >
+          {categoryTabs.map((tab) => {
+            const Icon = tab.icon;
+            const isActive = activeCategory === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveCategory(tab.id)}
+                className={`
+                  flex items-center gap-2.5 px-5 py-3 rounded-full border-2 font-sans font-bold text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer shadow-sm
+                  ${isActive
+                    ? 'bg-white text-black border-white dark:bg-black dark:text-white dark:border-black shadow-md scale-105'
+                    : 'bg-zinc-900/80 dark:bg-zinc-100/80 text-zinc-400 dark:text-zinc-600 border-zinc-700 dark:border-zinc-300 hover:border-white dark:hover:border-black hover:text-white dark:hover:text-black'
+                  }
+                `}
+              >
+                <Icon className="w-4 h-4" />
+                <span>{tab.label}</span>
+                <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-zinc-800 dark:bg-zinc-200 text-zinc-400 dark:text-zinc-600'}`}>
+                  {skills[tab.id]?.length || 0}
+                </span>
+              </button>
+            );
+          })}
+        </motion.div>
 
         {/* Active skills grid */}
         <motion.div
@@ -106,25 +80,32 @@ const Skills = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
-          {skills[activeCategory].map((skill) => (
+          {skills[activeCategory]?.map((skill) => (
             <div
               key={skill.name}
-              className="bg-zinc-900 dark:bg-zinc-100 border border-zinc-700 dark:border-zinc-300 rounded-xl p-5 card-lift group"
+              className="bg-zinc-900 dark:bg-zinc-100 border border-zinc-700 dark:border-zinc-300 rounded-2xl p-5 card-lift group flex flex-col justify-between"
             >
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 border border-zinc-600 dark:border-zinc-400"
-                style={{ backgroundColor: skill.color + '20' }}
-              >
-                <div className="w-4 h-4 rounded-full" style={{ backgroundColor: skill.color }} />
+              <div>
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-3 border border-zinc-600 dark:border-zinc-400"
+                  style={{ backgroundColor: skill.color + '20' }}
+                >
+                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: skill.color }} />
+                </div>
+                <h4 className="font-sans font-bold text-sm sm:text-base text-white dark:text-black leading-tight mb-2">
+                  {skill.name}
+                </h4>
               </div>
-              <h4 className="font-sans font-bold text-sm text-white dark:text-black leading-tight mb-1">
-                {skill.name}
-              </h4>
-              <span className="text-[10px] font-mono font-bold text-zinc-500 dark:text-zinc-500 uppercase">
-                {skill.level >= 90 ? 'EXPERT' : skill.level >= 85 ? 'ADVANCED' : 'PROFICIENT'}
-              </span>
+              <div className="flex items-center justify-between pt-3 border-t border-zinc-800 dark:border-zinc-200">
+                <span className="text-[10px] font-mono font-bold text-zinc-500 dark:text-zinc-500 uppercase tracking-wider">
+                  PROFICIENCY
+                </span>
+                <span className="text-[10px] font-mono font-black text-zinc-300 dark:text-zinc-700 uppercase">
+                  {skill.level >= 90 ? 'EXPERT' : skill.level >= 85 ? 'ADVANCED' : 'PROFICIENT'}
+                </span>
+              </div>
             </div>
           ))}
         </motion.div>

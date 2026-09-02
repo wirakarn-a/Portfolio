@@ -9,12 +9,14 @@ const Hero3D = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Top: Simple text nav breadcrumb */}
-        <div className="hidden sm:flex items-center justify-center gap-8 mb-12 text-xs font-sans font-bold tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400">
+        <div className="hidden sm:flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12 text-xs font-sans font-bold tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400">
           <a href="#hero" className="hover:text-black dark:hover:text-white transition-colors">ABOUT ME</a>
           <a href="#experience" className="hover:text-black dark:hover:text-white transition-colors">EXPERIENCE</a>
+          <a href="#projects" className="hover:text-black dark:hover:text-white transition-colors">PROJECTS</a>
           <a href="#education" className="hover:text-black dark:hover:text-white transition-colors">EDUCATION</a>
           <a href="#skills" className="hover:text-black dark:hover:text-white transition-colors">SKILLS</a>
-          <a href="#projects" className="hover:text-black dark:hover:text-white transition-colors">PROJECTS</a>
+          <a href="#languages" className="hover:text-black dark:hover:text-white transition-colors">LANGUAGES</a>
+          <a href="#certificates" className="hover:text-black dark:hover:text-white transition-colors">CERTIFICATES</a>
           <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">CONTACT</a>
         </div>
 

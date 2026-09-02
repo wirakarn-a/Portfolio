@@ -10,6 +10,7 @@ const navItems = [
   { id: 'education', name: 'EDUCATION' },
   { id: 'skills', name: 'SKILLS' },
   { id: 'languages', name: 'LANGUAGES' },
+  { id: 'certificates', name: 'CERTIFICATES' },
   { id: 'contact', name: 'CONTACT' },
 ];
 

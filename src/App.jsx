@@ -8,6 +8,7 @@ import AdditionalExperience from './components/AdditionalExperience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Languages from './components/Languages';
+import Certificates from './components/Certificates';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -48,7 +49,10 @@ function App() {
         {/* SECTION 7: Languages */}
         <Languages />
 
-        {/* SECTION 7: Contact */}
+        {/* SECTION 8: Certificates */}
+        <Certificates />
+
+        {/* SECTION 9: Contact */}
         <Contact />
 
         {/* Footer */}
